@@ -1,0 +1,40 @@
+{
+  "name": "@neutoc7/web-utils",
+  "version": "0.0.1",
+  "description": "common utils for web application",
+  "main": "./dist/index.js",
+  "exports": {
+    "optimization": "./dist/optimization/index.js",
+    "type": "./dist/type/index.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "eslint --ext ts src",
+    "build": "tsc -p tsconfig.json",
+    "build-watch": "tsc -w -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "rebuild": "npm run clean && npm run lint && npm run build",
+    "prepublishOnly": "npm run rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nuteu/web-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "web"
+  ],
+  "author": "nuto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuteu/web-utils/issues"
+  },
+  "homepage": "https://github.com/nuteu/web-utils#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "typescipt": "^1.0.0"
+  }
+}
