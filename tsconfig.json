@@ -1,0 +1,35 @@
+{
+    "include": [
+        "src/**/**.ts"
+    ],
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "lib": [
+            "ES2015",
+            "DOM",
+            "ES2016.Array.Include"
+        ],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es5",
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "noEmitOnError": true,
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "strictNullChecks": true,
+        "baseUrl": "",
+        "rootDir": "src",
+        "outDir": "dist",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        // "sourceMap": true,
+        "declaration": true
+    }
+}
