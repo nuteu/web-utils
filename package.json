@@ -4,8 +4,15 @@
   "description": "common utils for web application",
   "main": "./dist/index.js",
   "exports": {
-    "optimization": "./dist/optimization/index.js",
-    "type": "./dist/type/index.js"
+    ".": "./dist/index.js",
+    "./optimization": "./dist/optimization/index.js",
+    "./object": "./dist/object/index.js",
+    "./number": "./dist/number/index.js",
+    "./env": "./dist/env/index.js",
+    "./dom": "./dist/dom/index.js",
+    "./async": "./dist/async/index.js",
+    "./array": "./dist/array/index.js",
+    "./type": "./dist/type/index.js"
   },
   "scripts": {
     "clean": "rm -rf dist",
