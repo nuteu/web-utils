@@ -9,9 +9,9 @@ export function debounce(fn: TFunc, wait: number): TFunc {
     let timer: any;
     return (...args) => {
         if (timer) {
-            window.clearTimeout(timer);
+            clearTimeout(timer);
         }
-        timer = window.setTimeout(() => {
+        timer = setTimeout(() => {
             fn(...args);
             timer = 0;
         }, wait);

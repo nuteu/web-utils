@@ -19,9 +19,10 @@ export function throttle(func: TFunc, wait: number): TFunc {
         }
         else {
             timer = setTimeout(() => {
-                lastTime = currentTime;
+                lastTime = Date.now();
                 func(...args);
-            }, wait);
+                timer = undefined;
+            }, wait - (currentTime - lastTime));
         }
     };
 }

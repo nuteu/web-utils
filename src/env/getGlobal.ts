@@ -1,24 +1,24 @@
-export type TGlobal = Window & typeof globalThis;
+export type TGlobal = typeof globalThis;
 
 /**
- * 获取不同环境下的全局属性
- * 如浏览器环境下的 window 属性，node 环境下的 globalThis 属性
- * @returns 不同环境下的全局属性
+ * 获取不同环境下的全局对象
+ * 如浏览器环境下的 window 对象，node 环境下的 globalThis 对象
+ * @returns 不同环境下的全局对象
  */
 export function getGlobal(): TGlobal {
 
-    let temp: any;
+    let temp: TGlobal | undefined;
+    // worker / browser
     if (typeof self !== 'undefined') {
         temp = self;
     }
-    if (typeof window !== 'undefined') {
-        temp = window;
-    }
-    if (typeof global !== 'undefined') {
-        temp = global;
-    }
+    // nodejs / browser
     if (typeof globalThis !== 'undefined') {
         temp = globalThis;
+    }
+    // browser
+    if (typeof window !== 'undefined') {
+        temp = window;
     }
     if (temp) {
         return temp;
