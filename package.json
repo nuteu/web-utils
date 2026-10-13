@@ -1,6 +1,6 @@
 {
   "name": "@neutoc7/web-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "common utils for web application",
   "main": "./dist/index.js",
   "exports": {
