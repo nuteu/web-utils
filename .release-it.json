@@ -15,7 +15,60 @@
     "@release-it/conventional-changelog": {
       "infile": false,
       "preset": {
-        "name": "conventionalcommits"
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "perf",
+            "section": "Performance Improvements"
+          },
+          {
+            "type": "revert",
+            "section": "Reverts"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation",
+            "effect": "changelog"
+          },
+          {
+            "type": "style",
+            "section": "Styles",
+            "effect": "changelog"
+          },
+          {
+            "type": "refactor",
+            "section": "Code Refactoring",
+            "effect": "changelog"
+          },
+          {
+            "type": "test",
+            "section": "Tests",
+            "effect": "changelog"
+          },
+          {
+            "type": "build",
+            "section": "Build System",
+            "effect": "changelog"
+          },
+          {
+            "type": "ci",
+            "section": "Continuous Integration",
+            "effect": "changelog"
+          },
+          {
+            "type": "chore",
+            "section": "Maintenance",
+            "effect": "changelog"
+          }
+        ]
       }
     }
   }
